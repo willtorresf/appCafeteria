@@ -1,4 +1,4 @@
-# Cafeteria+Torres Clase 2
+# Cafeteria+Torres Clase 3 y 4
 
 # Getting Started with Create React App
 
