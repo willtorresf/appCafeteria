@@ -1,0 +1,38 @@
+.navBar{
+    background-color: #544024;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoNav{
+    width: 12em;
+    padding: 1em
+}
+.btnNav{
+    background: #C1A01E;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    margin-right: 1em;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+.navList li{
+    text-decoration: none;
+    display: inline;
+    padding: 3em;
+    font-size: 1.5em;
+    font-weight: 700;
+}
