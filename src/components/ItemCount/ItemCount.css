@@ -1,0 +1,46 @@
+.flexCount{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vh;
+    height: 2em;
+    border: solid 1px #544024;
+    border-radius: 20px;
+}
+
+.flexCount button{
+    border: none;
+    background-color: #fff;
+    color: #C1A01E;
+    font-weight: 800;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.flexCount span{
+    padding-left: 1em;
+    padding-right: 1em;
+    font-weight: 500;
+}
+
+.mainCount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addCart{
+    margin: 0.5em;
+    width: 30vh;
+    height: 2em;
+    border: 0;
+    border-radius: 20px;
+    background: #C1A01E;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
