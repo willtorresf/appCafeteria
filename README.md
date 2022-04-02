@@ -2,4 +2,4 @@
 
 # Desafios 
 
-Agregar NavBar, CartWidget y ItemListConteiner
+Agregar ItemCount, ItemList y Item
