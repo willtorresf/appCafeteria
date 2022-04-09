@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { getProducts } from '../../asyncMock';
 import ItemCount from '../ItemCount/ItemCount';
 
-const ItemListConteiner = (props) => {
+const ItemListConteiner = ({greeting}) => {
     
     const handleOnAdd = (quantity,stock)=>{
         if (stock === 0) {
@@ -26,9 +26,9 @@ const ItemListConteiner = (props) => {
     
     return (
         <section className='itemTitle'>
-            <h1>{props.greeting}</h1>
+            <h1>{greeting}</h1>
             <ItemList products = {product}/>
-            <ItemCount initial={1} stock={20} onAdd={handleOnAdd}/>
+            <ItemCount initial={1} stock={10} onAdd={handleOnAdd} name='Nombre del producto' message='Disponible' messageColor='#008000'/>
         </section>
     );
 }

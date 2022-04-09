@@ -1,0 +1,44 @@
+.imgSizeDetail{
+    width: 300px;
+    border-radius: 20px;
+
+}
+
+.detailImg{
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.mainItemDetail{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    column-gap: 5px;
+    margin: 0.5em;
+    padding: 0.25em;
+}
+
+
+.descriptionDetail{
+    margin: 0.5em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em;
+}
+
+.cartDetail{
+    border: solid 1px #544024;
+    border-radius: 20px;
+    margin: 0.5em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em;
+}
+

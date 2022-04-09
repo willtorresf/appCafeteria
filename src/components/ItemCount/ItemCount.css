@@ -31,6 +31,11 @@
     align-items: center;
 }
 
+.mainCount p{
+    margin: 5px;
+    font-weight: 500;
+}
+
 .addCart{
     margin: 0.5em;
     width: 30vh;

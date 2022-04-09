@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './ItemCount.css'
 
-const ItemCount = ({initial, stock, onAdd}) => {
+const ItemCount = ({initial, stock, onAdd, name, message, messageColor}) => {
     const [count,setCount] = useState(initial)
 
     const Increase = () => {
@@ -18,7 +18,9 @@ const ItemCount = ({initial, stock, onAdd}) => {
     
     return (
         <div className='mainCount'>
-            <h3>Nombre del item</h3>
+            <h3>{name}</h3>
+
+            <p style={{color: `${messageColor}`}}>{message}</p>
             
             <div className='flexCount'>
                 <button onClick={Decrease}>-</button>

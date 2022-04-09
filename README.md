@@ -1,5 +1,5 @@
-# Cafeteria+Torres Clase 5 y 6
+# Cafeteria+Torres Clase 7
 
 # Desafios 
 
-Agregar ItemCount, ItemList y Item
+Agregar ItemDetailConteiner e ItemDetail
