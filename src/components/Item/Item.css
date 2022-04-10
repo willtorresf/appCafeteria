@@ -20,18 +20,23 @@
     width: 50%;
 }
 
-.mainItem div button{
+.btnDetail{
     margin: 0.5em;
-    width: 20vh;
+    width: 15vh;
     height: 2em;
     border: 0;
     border-radius: 20px;
     background: #C1A01E;
     box-sizing: border-box;
-    color: #000;
     cursor: pointer;
+    
+}
+
+.btnDetailText{
+    color: #000;
     font-size: 16px;
     font-weight: 700;
+    text-decoration: none;    
 }
 
 h3, h4 {

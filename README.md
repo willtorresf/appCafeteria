@@ -1,5 +1,5 @@
-# Cafeteria+Torres Clase 7
+# Cafeteria+Torres Clase 8
 
-# Desafios 
+# Primera Pre-Entrega 
 
-Agregar ItemDetailConteiner e ItemDetail
+Routing y navegación

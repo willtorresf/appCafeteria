@@ -6,7 +6,7 @@
     align-items: center;
 }
 .logoNav{
-    width: 12em;
+    width: 8em;
     padding: 1em
 }
 .btnNav{
@@ -29,10 +29,46 @@
     word-break: break-word;
     border: 0;
 }
-.navList li{
+
+.activeLink{
     text-decoration: none;
-    display: inline;
-    padding: 3em;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
     font-size: 1.5em;
     font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    margin-right: 1em;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
+.Link{
+    text-decoration: none;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    margin-right: 1em;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+
 }

@@ -1,6 +1,7 @@
 import './Item.css'
+import { Link } from 'react-router-dom'
 
-const Item = ({name , price, img, description, stock}) =>{
+const Item = ({name , price, img, stock, id}) =>{
 
     let message = ""
     let messageColor = ""
@@ -25,7 +26,9 @@ const Item = ({name , price, img, description, stock}) =>{
                 <h4 style={{color: `${messageColor}`}}>{message}</h4>
             </div>
             <div>
-                <button onClick={()=>{console.log(description)}}>Ver detalles</button>
+                <button className='btnDetail'>
+                    <Link to={`detail/${id}`} className='btnDetailText'>Ver detalles</Link>
+                </button>
             </div>            
         </div>
     )
