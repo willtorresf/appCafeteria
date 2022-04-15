@@ -1,12 +1,16 @@
 import './CartWidget.css'
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
+
 
 const CartWidget = () => {
-    // código
+    
+    const { CartWidgetQuantity } = useContext(CartContext);
 
     return (
         <div className='cartFlex'>
             <img className="cartImg" src={'./images/shopping-cart.png'} alt="Carrito"/>
-            <p>3</p>
+            <p>{CartWidgetQuantity ()}</p>
         </div>
     );
 }

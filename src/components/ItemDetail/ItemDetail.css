@@ -42,3 +42,20 @@
     padding: 0.25em;
 }
 
+.detailLinkCart{
+    margin: 0.5em;
+    width: 15vh;
+    height: 2em;
+    border: 0;
+    border-radius: 20px;
+    background: #C1A01E;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 3px;
+}
+

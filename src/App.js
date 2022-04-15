@@ -3,20 +3,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import ItemListConteiner from './components/ItemListConteiner/ItemListContainer';
 import ItemDetailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner';
+import {CartContextProvider} from './context/CartContext'
 
 function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<ItemListConteiner greeting={"Ofertas"} />}/>
-          <Route path="/detail/:itemId" element={<ItemDetailConteiner/>} />
-          <Route path="/*" element={<h1>NOT FOUND 404</h1>} />
-          <Route path="/category/:categoryId" element={<ItemListConteiner/>} />
-        </Routes>
-      </BrowserRouter>
+      <CartContextProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route exact path="/" element={<ItemListConteiner greeting={"Ofertas"} />}/>
+            <Route exact path="/detail/:itemId" element={<ItemDetailConteiner/>} />
+            <Route exact path="/*" element={<h1>NOT FOUND 404</h1>} />
+            <Route exact path="/category/:categoryId" element={<ItemListConteiner/>} />
+          </Routes>
+        </BrowserRouter>
+      </CartContextProvider>
     </div>
   );
 }

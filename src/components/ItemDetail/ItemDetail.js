@@ -1,16 +1,27 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import { useContext, useState } from 'react'
+import CartContext from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({name, description, img, price, stock})=>{
+const ItemDetail = ({id, name, description, img, price, stock})=>{
 
-    const handleOnAdd = (quantity,stock)=>{
-        if (stock === 0) {
-            console.log("No hay stock de este producto");
-        } else {
-            console.log(`Se agregaron ${quantity} productos al carrito`);
-        }   
-    }
+    const { addItem, getCartQuantity, isInCart} = useContext(CartContext) 
     
+    ////////////////////////////////////////////////////////////////////////
+    const handleOnAdd = (count,stock)=>{
+        if (stock === 0) {
+            alert("No hay stock de este producto");
+        } else {
+            if (isInCart(id)){
+                const prodToAdd = { id, name, price }
+                addItem({...prodToAdd, quantity: count });
+            } else {
+                const prodToAdd = {id, name, price}
+                addItem({...prodToAdd, quantity: count})
+        }   }
+    }
+    /////////////////////////////////////////////////////////////////////////
     let message = ""
     let messageColor = ""
 
@@ -21,7 +32,7 @@ const ItemDetail = ({name, description, img, price, stock})=>{
         message = 'Indisponible';
         messageColor = "#ff0000";
     }
-
+    ////////////////////////////////////////////////////////////////////////
     return(
         <div className='mainItemDetail'>
             <div className='detailImg'>
@@ -32,9 +43,17 @@ const ItemDetail = ({name, description, img, price, stock})=>{
                 <p>Precio: R$ {price}</p>
                 <p>{description}</p>
             </div>
-            <div className='cartDetail'>
-                <ItemCount initial={1} stock={stock} name={name} message={message} messageColor={messageColor} onAdd={handleOnAdd}/>
-            </div>
+            
+            {isInCart(id) ?  
+                <div className='cartDetail'>
+                    <ItemCount initial={getCartQuantity(id)} stock={stock} name={name} message={message} messageColor={messageColor} onAdd={handleOnAdd}/>
+                    <Link className='detailLinkCart' to={'/cart'}>Ir al carrito</Link>
+                </div>
+                :
+                <div className='cartDetail'>
+                    <ItemCount initial={1} stock={stock} name={name} message={message} messageColor={messageColor} onAdd={handleOnAdd}/>
+                </div>
+            }   
         </div>
     )
 }
