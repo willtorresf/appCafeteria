@@ -5,7 +5,14 @@ import CartContext from "../../context/CartContext";
 
 const CartWidget = () => {
     
-    const { CartWidgetQuantity } = useContext(CartContext);
+    const { cart, CartWidgetQuantity } = useContext(CartContext);
+
+    if (cart.length ===0 ){
+        return(
+            <>
+            </>
+        )
+    }
 
     return (
         <div className='cartFlex'>
