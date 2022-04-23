@@ -18,7 +18,7 @@ function App() {
             <Route exact path="/detail/:itemId" element={<ItemDetailConteiner/>} />
             <Route exact path="/*" element={<h1>NOT FOUND 404</h1>} />
             <Route exact path="/category/:categoryId" element={<ItemListConteiner/>} />
-            <Route exact path="/Cart" element = {<Cart/>}/>
+            <Route exact path="/cart" element = {<Cart/>}/>
           </Routes>
         </BrowserRouter>
       </CartContextProvider>

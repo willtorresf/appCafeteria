@@ -47,7 +47,7 @@ const ItemDetail = ({id, name, description, img, price, stock})=>{
             {isInCart(id) ?  
                 <div className='cartDetail'>
                     <ItemCount initial={getCartQuantity(id)} stock={stock} name={name} message={message} messageColor={messageColor} onAdd={handleOnAdd}/>
-                    <Link className='detailLinkCart' to={'/Cart'}>Ir al carrito</Link>
+                    <Link className='detailLinkCart' to={'/cart'}>Ir al carrito</Link>
                 </div>
                 :
                 <div className='cartDetail'>

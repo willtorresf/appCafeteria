@@ -1,6 +1,7 @@
 import './CartWidget.css'
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
+import { Link } from 'react-router-dom';
 
 
 const CartWidget = () => {
@@ -16,8 +17,10 @@ const CartWidget = () => {
 
     return (
         <div className='cartFlex'>
-            <img className="cartImg" src={'./images/shopping-cart.png'} alt="Carrito"/>
-            <p>{CartWidgetQuantity ()}</p>
+            <Link className='cartWidLink' to='/cart'>
+                <img className="cartImg" src={'./images/shopping-cart.png'} alt="Carrito"/>
+                <p>{CartWidgetQuantity ()}</p>
+            </Link>
         </div>
     );
 }

@@ -10,36 +10,37 @@ const Cart = () => {
 
     if (cart.length === 0){
             return (
-                <div>
+                <div className="cartMain">
                     <h1>Carrito</h1>
                     <h3>No hay productos en el carrito</h3>
+                    <img className="cartImg" src={'./images/cart-cart.png'} alt="Carrito"/>
                     <Link to = '/'>Volver al home</Link>
                 </div>
     )
     }
 
     return (
-        <div className="cartMain">
+        <div className="cartMain2">
             <h1>Carrito</h1>
             
             <div className="subtitlesCart">    
-                <p>Producto</p>
-                <p>Cantidad</p>
-                <p>Precio</p>
-                <p>Subtotal</p>
+                <h3>Producto</h3>
+                <h3>Cantidad</h3>
+                <h3>Precio</h3>
+                <h3>Subtotal</h3>
+            </div>
+
+            <div className='ItemCartMain'>
+                {cart.map(items => <ItemCart key={items.id} {...items}/>)}
+            </div>
+
+            <div className="cartTotal">
+                <p>Total:<span> R$ {SumCart()}</span></p>
             </div>
 
             <div>
-                    {cart.map(items => <ItemCart key={items.id} {...items}/>)}
-            </div>
-
-            <div>
-                    <p>Total <span>R$ {SumCart()}</span></p>
-            </div>
-
-            <div>
-                    <button onClick={clearCart}>Eliminar todos los productos</button>
-                    <button onClick={()=>{console.log("seguir con el pago")}}>Terminar mi compra</button>
+                <button className="cartBtnClear" onClick={clearCart}>Eliminar todos los productos</button>
+                <button className="cartBtnPurchase" onClick={()=>{console.log("seguir con el pago")}}>Terminar mi compra</button>
             </div>
         </div>
     )

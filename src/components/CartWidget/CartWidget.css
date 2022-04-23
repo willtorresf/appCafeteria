@@ -9,8 +9,10 @@
     padding: 1em;
 }
 
-.cartFlex p {
+.cartWidLink {
     font-size: 16px;
     font-weight: 700;
     padding: 0.5em;
+    text-decoration: none;
+    color: #000;
 }

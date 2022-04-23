@@ -8,13 +8,13 @@ const ItemCart = ({id, name, price, quantity}) =>{
     const {removeItem} = useContext(CartContext)
 
     return(
-        <div className='ItemCartMain'>
+        <>
             <p>{name}</p>
             <p>{quantity}</p>
-            <p>{price}</p>
-            <p>{quantity*price}</p>
-            <button onClick={()=>{removeItem(id)}}> X </button>
-        </div>
+            <p>R$ {price}</p>
+            <p>R$ {quantity*price}</p>
+            <button className='cartBtnX' onClick={()=>{removeItem(id)}}>X</button>
+        </>
     )
 }
 
