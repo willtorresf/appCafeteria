@@ -56,8 +56,28 @@ export const CartContextProvider = ({children}) =>{
         }
     }
 
+    const initialForm = {
+        name: "",
+        email: "",
+        phone: 0
+    }
+
+    const [form, setForm] = useState(initialForm);
+
+    const [sentForm, setSentForm] = useState(false)
+
+    const handleOnSubmit = (e) =>{
+        e.preventDefault();
+        console.log(form)
+        setSentForm(true)
+    }
+
+    const handleOnChange = (e) =>{
+        setForm({...form, [e.target.name]:e.target.value});
+    }
+
     return(
-        <CartContext.Provider value={{cart, addItem, clearCart, removeItem, CartWidgetQuantity, isInCart, getCartQuantity, SumCart}}>
+        <CartContext.Provider value={{cart, addItem, clearCart, removeItem, CartWidgetQuantity, isInCart, getCartQuantity, SumCart, handleOnChange, handleOnSubmit,form, sentForm}}>
             {children}
         </CartContext.Provider>
     )

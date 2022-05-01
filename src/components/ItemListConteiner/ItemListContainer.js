@@ -31,10 +31,12 @@ const ItemListConteiner = ({greeting}) => {
     }
     
     return (
-        <section className='itemTitle'>
-            <h1>{greeting}</h1>
-            <ItemList products = {product}/>
-        </section>
+        <main>
+            <section className='itemTitle'>
+                <h1>{greeting}</h1>
+                <ItemList products = {product}/>
+            </section>
+        </main>
     );
 }
 

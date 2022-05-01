@@ -2,7 +2,7 @@ import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget.js'
 import { NavLink, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getDocs, collection, query, where, Firestore } from "firebase/firestore";
+import { getDocs, collection, query} from "firebase/firestore";
 import { firestoreDb } from "../../services/firebase/index"; 
 
 const NavBar = () => {
@@ -19,23 +19,25 @@ const NavBar = () => {
     },[])
 
     return (
-        <nav className='navBar'>
-            <div>
-                <Link to='/'>
-                    <img src={'./images/logoClaudia.png'} alt="Logo" className='logoNav'/>
-                </Link>
-            </div>
+        <header>
+            <nav className='navBar'>
+                <div>
+                    <Link to='/'>
+                        <img src={'./images/logoClaudia.png'} alt="Logo" className='logoNav'/>
+                    </Link>
+                </div>
 
-            {category.map(cat => 
-                <div key={cat.id}><NavLink to={`/category/${cat.id}`} className={({isActive}) => isActive ? 'activeLink' : 'Link'}>{cat.name}</NavLink></div> 
-            )}
+                {category.map(cat => 
+                    <div key={cat.id}><NavLink to={`/category/${cat.id}`} className={({isActive}) => isActive ? 'activeLink' : 'Link'}>{cat.name}</NavLink></div> 
+                )}
 
-            <div>
-                <button className='btnNav'>Login</button>
-            </div>
-            
-            <CartWidget/>
-        </nav>
+                <div>
+                    <button className='btnNav'>Login</button>
+                </div>
+                
+                <CartWidget/>
+            </nav>
+        </header>
     );
 }
 
