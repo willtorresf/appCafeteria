@@ -1,0 +1,36 @@
+.formConteiner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.formMain {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.formMain input{
+    margin-bottom: 1em;
+    width: 150%;
+    height: 2em;
+    border-radius: 10px;
+    border: solid 1px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.formMain input[type = submit]{
+    height: 2em;
+    width: 5em;
+    border: 0;
+    border-radius: 20px;
+    background: #C1A01E;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;   
+}

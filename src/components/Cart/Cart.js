@@ -95,7 +95,7 @@ const Cart = () => {
 
             {!sentForm ? 
                 <div>
-                    <button className="cartBtnClear" onClick={clearCart}>Eliminar todos los productos</button>
+                    <button className="cartBtnClear" onClick={clearCart}>Eliminar productos</button>
                     <button className="cartBtnPurchase" onClick={openModal}>Llenar datos personales</button>
                     <Modal isOpen={isOpen} closeModal = {closeModal}>
                         <CartForm closeModal={closeModal}/>
@@ -103,7 +103,7 @@ const Cart = () => {
                 </div> 
                 :
                 <div>
-                    <button className="cartBtnClear" onClick={clearCart}>Eliminar todos los productos</button>
+                    <button className="cartBtnClear" onClick={clearCart}>Eliminar productos</button>
                     <button className="cartBtnPurchase" onClick={()=> createOrder()}>Terminar mi compra</button>
                 </div>
             }
