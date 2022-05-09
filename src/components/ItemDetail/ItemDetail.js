@@ -1,6 +1,6 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import CartContext from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 
@@ -8,7 +8,6 @@ const ItemDetail = ({id, name, description, img, price, stock})=>{
 
     const { addItem, getCartQuantity, isInCart} = useContext(CartContext) 
     
-    ////////////////////////////////////////////////////////////////////////
     const handleOnAdd = (count,stock)=>{
         if (stock === 0) {
             alert("No hay stock de este producto");
@@ -21,7 +20,7 @@ const ItemDetail = ({id, name, description, img, price, stock})=>{
                 addItem({...prodToAdd, quantity: count})
         }   }
     }
-    /////////////////////////////////////////////////////////////////////////
+    
     let message = ""
     let messageColor = ""
 
@@ -32,7 +31,7 @@ const ItemDetail = ({id, name, description, img, price, stock})=>{
         message = 'Indisponible';
         messageColor = "#ff0000";
     }
-    ////////////////////////////////////////////////////////////////////////
+    
     return(
         <div className='mainItemDetail'>
             <div className='detailImg'>

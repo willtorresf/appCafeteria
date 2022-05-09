@@ -1,0 +1,15 @@
+.footer-main{
+    padding-left: 400px;
+    padding-right: 400px;
+    background-color: #544024;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.footer-main p {
+    color: #000;
+    font-size: 1.5em;
+    font-weight: 700;
+}

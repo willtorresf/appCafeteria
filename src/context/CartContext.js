@@ -47,13 +47,9 @@ export const CartContextProvider = ({children}) =>{
     }
 
     const getCartQuantity = (id) =>{
-        if (isInCart(id)){
-            const products = cart.filter((prod) => prod.id === id);
-            let cartQuantity = products[0].quantity;
-            return cartQuantity;
-        } else {
-            return 1
-        }
+        const product = cart.filter(prod => prod.id === id);
+        let cartQuantity = product[0].quantity;
+        return cartQuantity;
     }
 
     const initialForm = {
