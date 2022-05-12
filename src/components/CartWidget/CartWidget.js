@@ -19,7 +19,7 @@ const CartWidget = () => {
         <div className='cartFlex'>
             <Link className='cartWidLink' to='/cart'>
                 <img className="cartImg" src={'./images/shopping-cart.png'} alt="Carrito"/>
-                <p>{CartWidgetQuantity ()}</p>
+                <span>{CartWidgetQuantity ()}</span>
             </Link>
         </div>
     );

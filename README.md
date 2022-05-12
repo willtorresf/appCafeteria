@@ -32,7 +32,7 @@ npm i
 ### 2) CartWidget
 
 - Este componente solo se muestra si el carrito tiene productos (display condicional)
-- Tiene la función de mostrar la cantidad de itens dentro del carrito. Gracias al cartContext y tiene una ruta hacia el carrito ('/cart') 
+- Tiene la función de mostrar la cantidad de itens dentro del carrito, gracias al cartContext y tiene una ruta hacia el carrito ('/cart') 
 
 ### 3) Cart
 
@@ -42,7 +42,7 @@ npm i
 
 ### 4) ItemCart
 
-- Este componente retorna los productos del carrito (nombre, cantidad, precio, subtotal y un boton para eliminar dicho item.
+- Este componente retorna los productos del carrito (nombre, cantidad, precio, subtotal y un boton para eliminar dicho item).
 
 ### 5) Modal
 
@@ -67,27 +67,27 @@ npm i
 
 ### 9) ItemList
 
-- Este componente tiene la función de generar la card cada uno de los productos (componente Item) obtenida de la props del ItemListConteiner.
+- Este componente tiene la función de generar la card para cada uno de los productos (componente Item) obtenida de la props del ItemListConteiner.
 
-### 9) Item
+### 10) Item
 
 - Este componente es la card de los productos.
 - Muestra el nombre, precio, disponibilidad y el boton con la ruta ('/detail+id') para el detalle (Componentes ItemDetailCOnteiner, ItemCount e ItemDetail)
 
-### 9) ItemDetailConteiner
+### 11) ItemDetailConteiner
 
 - Este componente tiene la función de mostrar la información del producto específico que se solicitó (firebase/Promesa).
 - Por medio de un useParams hace el filtro para cada id.
 - Utiliza el componente ItemDetail y el ItemCount
 
-### 9) ItemDetail
+### 12) ItemDetail
 
 - Este componente muestra todos los detalles del producto. Descripción, foto, nombre, precio, entre otros. Además del contador y del botón para agregar al carrito.
-- Usa el cartContext para el funcionamiento del ItemCount por props.
+- Usa el cartContext para el funcionamiento del ItemCount (addItem) por props.
 
-### 10) ItemCount
+### 13) ItemCount
 
-- Este componente se encarga de definir la cantidad de productos que el usuario quiere agregar al carrito. Utilizan un useState.
+- Este componente se encarga de definir la cantidad de productos que el usuario quiere agregar al carrito. Utiliza un useState.
 - Tiene un botón de agregar al carrito, el cual adiciona la cantidad seleccionada por el usuario.
 
 ## Context
