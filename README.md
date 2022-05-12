@@ -96,7 +96,7 @@ Se empleó el uso de un único context llamado cartContext, donde se manejó tod
 
 Se utilizó lo siguiente:
 - Tres estados (useState), uno para el carrito (cart), otro para el formulario (form) y el último para el envio del formulario (sentForm).
-- Funciones para agregar al carrito (addItem), eliminar todos los itens (clearCart), eliminar un producto en específico (removeItem), el contador del CartWidget (cartWidgetQuantity), verificar si el item está en el carrito (isInCart), calcular el valor total de la compra (SumCart), guardar la información del formulario en cada variable (handleOnChange) y verificar si el formulario fue completado (handleOnSubmit).
+- Funciones para agregar al carrito (addItem), eliminar todos los itens (clearCart), eliminar un producto en específico (removeItem), el contador del CartWidget (cartWidgetQuantity), verificar si el item está en el carrito (isInCart), calcular el valor total de la compra (SumCart), guardar la información del formulario en cada variable (handleOnChange), validación del formulario (handleOnBlur) y verificar si el formulario fue completado (handleOnSubmit).
 
 ## Hooks
 
