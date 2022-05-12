@@ -54,26 +54,64 @@ export const CartContextProvider = ({children}) =>{
 
     const initialForm = {
         name: "",
-        email: "",
-        phone: 0
+        phone: 0,
+        email1: "",
+        email2: ""        
     }
 
     const [form, setForm] = useState(initialForm);
 
     const [sentForm, setSentForm] = useState(false)
 
+    const [errors, setErrors] = useState({})
+
     const handleOnSubmit = (e) =>{
         e.preventDefault();
-        console.log(form)
-        setSentForm(true)
+        console.log(form);
+        setSentForm(true);
     }
 
     const handleOnChange = (e) =>{
         setForm({...form, [e.target.name]:e.target.value});
     }
 
+    const handleOnBlur = (e) =>{
+        handleOnChange(e);
+        setErrors(validationsForm(form))
+    }
+
+    const validationsForm = (form) =>{
+        let errors = {}
+        let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+        let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+
+        if (!form.name.trim()){
+            errors.name="El campo 'Nombre' es requerido"
+        } else if (!regexName.test(form.name.trim())){
+            errors.name = "El campo 'Nombre' solo acepta letras y espacios en blanco"
+        } 
+        
+        if (form.phone == null || form.phone =="") {
+            errors.phone = "El campo 'Teléfono' es requerido";
+        }
+
+        if (!form.email1.trim()) {
+            errors.email1 = "El campo 'Email' es requerido";
+        } else if (!regexEmail.test(form.email1.trim())){
+            errors.email1 = "El campo 'Email' es incorrecto"
+        } 
+        
+        if (!form.email2.trim()) {
+            errors.email2 = "El campo 'Email' es requerido";
+        } else if (form.email2.trim() !== form.email1 ){
+            errors.email2 = "Los campos 'Emails' deben ser iguales"
+        }
+
+        return errors
+    }
+
     return(
-        <CartContext.Provider value={{cart, addItem, clearCart, removeItem, CartWidgetQuantity, isInCart, getCartQuantity, SumCart, handleOnChange, handleOnSubmit,form, sentForm}}>
+        <CartContext.Provider value={{cart, addItem, clearCart, removeItem, CartWidgetQuantity, isInCart, getCartQuantity, SumCart, handleOnChange, handleOnSubmit, handleOnBlur, errors, form, sentForm}}>
             {children}
         </CartContext.Provider>
     )

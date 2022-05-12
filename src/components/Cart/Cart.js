@@ -20,7 +20,7 @@ const Cart = () => {
             items: cart,
             buyer: {
                 name: form.name,
-                email: form.email,
+                email: form.email1,
                 phone: form.phone,
             },
             total: SumCart(),
