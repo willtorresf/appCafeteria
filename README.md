@@ -51,9 +51,9 @@ npm i
 
 ### 6) Form
 
-- Este componente tiene la función de colectar la información del cliente (nombre, telefono y email) para generar la orden de compra.
+- Este componente tiene la función de colectar la información del cliente (nombre, telefono, email y confirmación email) para generar la orden de compra.
 - Esta dentro del modal (componente) y solo se activa al presionar el boton de llenar datos personales.
-- Utiliza el cartContext para su funcionamiento
+- Utiliza el cartContext para su funcionamiento y las validaciones del formulario.
 
 ### 7) Footer
 
@@ -97,6 +97,7 @@ Se empleó el uso de un único context llamado cartContext, donde se manejó tod
 Se utilizó lo siguiente:
 - Tres estados (useState), uno para el carrito (cart), otro para el formulario (form) y el último para el envio del formulario (sentForm).
 - Funciones para agregar al carrito (addItem), eliminar todos los itens (clearCart), eliminar un producto en específico (removeItem), el contador del CartWidget (cartWidgetQuantity), verificar si el item está en el carrito (isInCart), calcular el valor total de la compra (SumCart), guardar la información del formulario en cada variable (handleOnChange), validación del formulario (handleOnBlur) y verificar si el formulario fue completado (handleOnSubmit).
+- Validaciones del formulario.
 
 ## Hooks
 
@@ -129,7 +130,7 @@ En el componente Cart se encuentra la lógica para crear la orden en la collecci
 2) Seleccionar la cantidad deseada y clicar en agregar al carrito.
 3) Si no se va a agregar ningún otro producto, clicar en el botón de ir al carrito en el detalle del producto agregado o clicar en el CartWidget en la barra de navegación (NavBar).
 4) Una vez en el carrito, verificar la cantidad y el producto. Si esta todo en orden, clicar en llenar datos personales.
-5) Completar los campos (nombre, telefono y email) y clicar en enviar.
+5) Completar los campos (nombre, telefono, email y confirmación del email) y clicar en enviar.
 6) Clicar en terminar mi compra y listo orden creada.
 
 **Free Software, Hell Yeah!**
